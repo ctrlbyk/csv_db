@@ -62,9 +62,9 @@ function insert_data($conn, $table, $fieldNames, $file_name, $primary = "", $ind
 
         $conn->query($insertCommand . consolidate($values));
 
-        if ($exit == 10)
+        /* if ($exit == 10)
             break;
-        $exit = $exit + 1;
+        $exit = $exit + 1; */
     }
     fclose($file);
     print "File: " . $file_name . " it's Ok. (" . end_time($time_start) . " mins)\n";

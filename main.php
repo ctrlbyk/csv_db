@@ -8,6 +8,7 @@ $servername = "localhost";
 $username = "root";
 $password = "1234";
 $dbname = "example";
+$path_files = "/home/kenet/Descargas/hardies/";
 
 $conn = new mysqli($servername, $username, $password);
 create_database($conn, $dbname);
@@ -48,7 +49,7 @@ foreach ($entries as $entry) {
         $conn,
         $entry["table"],
         $entry["fieldNames"],
-        $entry["file_name"],
+        $path_files . $entry["file_name"],
         $entry["primary"],
         $entry["index"]
     );
